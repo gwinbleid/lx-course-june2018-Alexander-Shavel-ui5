@@ -12,14 +12,24 @@
             data-sap-ui-libs="sap.m"
             data-sap-ui-theme="sap_belize"
             data-sap-ui-compatVersion="edge"
-            data-sap-ui-language="en"
-            data-sap-ui-resourceroots='{"leverx.app": "./"}'>
+            data-sap-ui.lenguage="en"
+            data-sap-ui-language="ru"
+            data-sap-ui-resourceroots='{"sap.xander.shavel.app": "./"}'>
     </script>
 
     <script>
         sap.ui.getCore().attachInit(function() {
+            // Create a resource bundle for language specific texts
+            var oResourceModel = new sap.ui.model.resource.ResourceModel({
+                bundleName : "sap.xander.shavel.app.i18n.i18n"
+            });
+
+            // Assign the modle object to the SAPIU5 core using the name "i18n"
+            sap.ui.getCore().setModel(oResourceModel, "i18n");
+
+
             new sap.ui.core.ComponentContainer({
-                name : "leverx.app"
+                name : "sap.xander.shavel.app"
             }).placeAt("content");
         });
     </script>

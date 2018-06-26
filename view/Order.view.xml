@@ -1,0 +1,212 @@
+<core:View
+        xmlns:core="sap.ui.core"
+        xmlns="sap.uxap"
+        xmlns:layout="sap.ui.layout"
+        xmlns:m="sap.m"
+        xmlns:f="sap.ui.layout.form"
+        controllerName="sap.xander.shavel.app.controller.Order"
+        height="100%">
+
+    <m:Page
+            title="{i18n>detailPageTitle}"
+            showNavButton="true"
+            navButtonPress="onNavBack"
+    >
+    <ObjectPageLayout id="ObjectPageLayout" alwaysShowContentHeader="true"
+                      enableLazyLoading="false" showAnchorBarPopover="false"
+        >
+        <headerTitle>
+            <ObjectPageHeader id="headerForTest"
+                              headerDesign="Light"
+                              objectTitle="{
+                                    parts: [
+                                        'i18n>OrderTitle',
+                                        'odata>id',
+                                        'odata>summary/createdAt'
+                                    ],
+                                    formatter: 'jQuery.sap.formatMessage'
+                              }"
+                              objectSubtitle="{
+                                    parts: [
+                                        'i18n>TotalOrderPrice',
+                                        'odata>summary/totalPrice',
+                                        'odata>summary/currency'
+                                    ],
+                                    formatter: 'jQuery.sap.formatMessage'
+                              }"
+            >
+            </ObjectPageHeader>
+        </headerTitle>
+        <headerContent>
+            <layout:VerticalLayout>
+                <m:ObjectStatus title="{i18n>orderStatus}" text="{odata>summary/status}"/>
+                <m:ObjectStatus title="{i18n>orderCustomer}" text="{odata>summary/customer}"/>
+            </layout:VerticalLayout>
+
+        </headerContent>
+        <sections>
+            <ObjectPageSection title="{i18n>shipInfo}">
+                <subSections>
+                    <ObjectPageSubSection title="">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm id="shipInfoForm"
+                                              layout="ResponsiveGridLayout"
+                                              labelSpanXL="4"
+                                              labelSpanL="3"
+                                              labelSpanM="4"
+                                              labelSpanS="12"
+                                              adjustLabelSpan="false"
+                                              emptySpanXL="0"
+                                              emptySpanL="4"
+                                              emptySpanM="0"
+                                              emptySpanS="0"
+                                              columnsXL="2"
+                                              columnsL="1"
+                                              columnsM="1"
+                                              singleContainerFullSize="false"
+                                >
+                                    <f:toolbar>
+                                        <m:Toolbar>
+                                            <m:Title text="{i18n>shipFormTitle}" level="H4" titleStyle="H4"/>
+
+                                            <m:Button icon="sap-icon://edit" visible="{= !${appView>/editShipData} }" press="onEditShipDataPress" />
+                                            <m:Button icon="sap-icon://save" visible="{appView>/editShipData}" press="onSaveShipDataPress" />
+                                            <m:Button icon="sap-icon://cancel" visible="{appView>/editShipData}" press="onCancelShipDataPress" />
+                                        </m:Toolbar>
+                                    </f:toolbar>
+                                    <f:content>
+                                        <m:Label text="{i18n>shipTo}"/>
+                                        <m:Input value="{odata>shipTo/name}" editable="{appView>/enableShipInput}" />
+
+                                        <m:Label text="{i18n>address}"/>
+                                        <m:Input value="{odata>shipTo/address}" editable="{appView>/enableShipInput}" />
+
+                                        <m:Label text="{i18n>ZIP}"/>
+                                        <m:Input value="{odata>shipTo/ZIP}" editable="{appView>/enableShipInput}" />
+
+                                        <m:Label text="{i18n>region}"/>
+                                        <m:Input value="{odata>shipTo/region}" editable="{appView>/enableShipInput}" />
+
+                                        <m:Label text="{i18n>country}"/>
+                                        <m:Input value="{odata>shipTo/country}" editable="{appView>/enableShipInput}" />
+
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="{i18n>customerInfo}">
+                <subSections>
+                    <ObjectPageSubSection title="">
+                        <blocks>
+                            <m:VBox class="sapUiSmallMargin">
+                                <f:SimpleForm id="customerInfoForm"
+                                              layout="ResponsiveGridLayout"
+                                              labelSpanXL="4"
+                                              labelSpanL="3"
+                                              labelSpanM="4"
+                                              labelSpanS="12"
+                                              adjustLabelSpan="false"
+                                              emptySpanXL="0"
+                                              emptySpanL="4"
+                                              emptySpanM="0"
+                                              emptySpanS="0"
+                                              columnsXL="2"
+                                              columnsL="1"
+                                              columnsM="1"
+                                              singleContainerFullSize="false"
+                                >
+                                    <f:toolbar>
+                                        <m:Toolbar>
+                                            <m:Title text="{i18n>customerFormTitle}" level="H4" titleStyle="H4"/>
+
+                                            <m:Button icon="sap-icon://edit" visible="{= !${appView>/editCustomData} }" press="onEditCustomerDataPress" />
+                                            <m:Button icon="sap-icon://save" visible="{appView>/editCustomData}" press="onSaveCustomerDataPress" />
+                                            <m:Button icon="sap-icon://cancel" visible="{appView>/editCustomData}" press="onCancelCustomerDataPress" />
+                                        </m:Toolbar>
+                                    </f:toolbar>
+                                    <f:content>
+                                        <m:Label text="{i18n>firstName}"/>
+                                        <m:Input value="{odata>customerInfo/firstName}" editable="{appView>/enableCustomInput}" />
+
+                                        <m:Label text="{i18n>lastName}"/>
+                                        <m:Input value="{odata>customerInfo/lastName}" editable="{appView>/enableCustomInput}" />
+
+                                        <m:Label text="{i18n>address}"/>
+                                        <m:Input value="{odata>customerInfo/address}" editable="{appView>/enableCustomInput}" />
+
+                                        <m:Label text="{i18n>phone}"/>
+                                        <m:Input value="{odata>customerInfo/phone}" editable="{appView>/enableCustomInput}" />
+
+                                        <m:Label text="{i18n>email}"/>
+                                        <m:Input value="{odata>customerInfo/email}" editable="{appView>/enableCustomInput}" />
+
+                                    </f:content>
+                                </f:SimpleForm>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="{i18n>products}">
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>products}">
+                        <blocks>
+                            <m:Table
+                                    id="tableOfOrders"
+                                    mode="Delete"
+                                    delete="onDeleteProductPress"
+                                    items="{odata>products}"
+                            >
+                                <m:headerToolbar>
+                                    <m:Toolbar>
+                                        <m:Button
+                                                id="addProductButton"
+                                                icon="sap-icon://add"
+                                                tooltip="{i18n>addProduct}"
+                                                press="onOpenProductDialog"/>
+                                    </m:Toolbar>
+                                </m:headerToolbar>
+                                <m:columns>
+                                    <m:Column>
+                                        <m:Text text="{i18n>id}"/>
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Text text="{i18n>productName}"/>
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Text text="{i18n>productPrice}"/>
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Text text="{i18n>productQuantity}"/>
+                                    </m:Column>
+                                    <m:Column>
+                                        <m:Text text="{i18n>productTotalPrice}"/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem
+                                            press="onProductItemNavigate"
+                                            type="Navigation"
+                                    >
+                                        <m:Text text="{odata>id}"/>
+                                        <m:Text text="{odata>name}"/>
+                                        <m:Text text="{odata>price}"/>
+                                        <m:Text text="{odata>quantity}"/>
+                                        <m:Text text="{odata>totalPrice}"/>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+    </m:Page>
+</core:View>

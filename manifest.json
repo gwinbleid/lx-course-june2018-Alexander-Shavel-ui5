@@ -1,15 +1,25 @@
 {
   "sap.app": {
-    "id": "leverx.app",
+    "id": "sap.xander.shavel.app",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "applicationVersion": {
       "version": "1.0.0"
+    },
+    "dataSources": {
+      "mainService": {
+          "uri": "http://localhost:3000/odata",
+          "type": "OData",
+          "settings": {
+            "odataVersion": "2.0"
+          }
+      }
     }
   },
   "sap.ui": {
+    "technology": "UI5",
     "deviceTypes": {
       "desktop": true,
       "tablet": true,
@@ -20,17 +30,18 @@
     ]
   },
   "sap.ui5": {
-    "rootView": "leverx.app.view.App",
+    "rootView": "sap.xander.shavel.app.view.App",
     "routing": {
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "leverx.app.view",
+        "viewPath": "sap.xander.shavel.app.view",
         "controlId": "RootApp",
         "controlAggregation": "pages",
+        "transition": "slide",
         "bypassed": {
           "target": [
-            "notFound"
+              "notFound"
           ]
         },
         "async": true
@@ -38,54 +49,55 @@
       "routes": [
         {
           "pattern": "",
-          "name": "FirstPage",
+          "name": "ordersList",
           "target": [
-            "firstPage"
+            "ordersPage"
           ]
         },
         {
-          "pattern": "order",
-          "name": "SecondPage",
+          "pattern": "/Orders/{orderId}",
+          "name": "orderItem",
           "target": [
-            "secondPage"
+            "orderPage"
           ]
         },
         {
-          "pattern": "product",
-          "name": "ThirdPage",
+          "pattern": "/Products/{productId}",
+          "name": "productItem",
           "target": [
-            "thirdPage"
+            "productPage"
           ]
         }
       ],
 
       "targets": {
-        "firstPage": {
-          "viewName": "FirstPage",
-          "viewId": "firstPage",
+        "ordersPage": {
+          "viewName": "Orders",
+          "viewId": "ordersList",
           "viewLevel": 1
         },
 
-        "secondPage": {
-          "viewName": "SecondPage",
-          "viewId": "secondPage",
+        "orderPage": {
+          "viewName": "Order",
+          "viewId": "orderItem",
           "viewLevel": 2
         },
 
-        "thirdPage": {
-          "viewName": "ThirdPage",
-          "viewId": "thirdPage",
+        "productPage": {
+          "viewName": "Product",
+          "viewId": "productItem",
           "viewLevel": 3
         },
 
         "notFound": {
           "viewName": "NotFound",
-          "viewId": "notFound"
+          "viewId": "notFound",
+          "transition": "show"
         }
       }
     },
     "dependencies": {
-      "minUI5Version": "1.54.0",
+      "minUI5Version": "1.44.19",
       "libs": {
         "sap.m": {}
       }
@@ -94,7 +106,16 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "leverx.app.i18n.i18n"
+          "bundleName": "sap.xander.shavel.app.i18n.i18n"
+        }
+      },
+      "odata": {
+        "dataSource": "mainService",
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "useBatch": false,
+          "disableHeadRequestForToken": true
         }
       }
     }

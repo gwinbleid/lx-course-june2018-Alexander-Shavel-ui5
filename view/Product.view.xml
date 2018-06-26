@@ -1,0 +1,77 @@
+<mvc:View
+        controllerName="sap.xander.shavel.app.controller.Product"
+        xmlns="sap.m"
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:wt="leverx.app.control">
+    <Page
+            title="{i18n>productView}"
+            showNavButton="true"
+            navButtonPress="onNavBack">
+        <ObjectHeader
+                title="{odata>name}"
+                condensed="true"
+                number="{
+			        parts:[{path:'odata>price'},{path:'odata>currency'}],
+			        type: 'sap.ui.model.type.Currency',
+			        formatOptions: {showMeasure: false}
+		        }"
+                numberUnit="{odata>currency}" >
+            <attributes>
+                <ObjectAttribute text="{
+                        parts: [
+                            'i18n>productInfo',
+                            'odata>quantity',
+                            'odata>price'
+                        ],
+                        formatter: 'jQuery.sap.formatMessage'
+                    }"
+                />
+            </attributes>
+        </ObjectHeader>
+        <Panel
+
+        >
+            <content>
+                <FlexBox
+                    justifyContent="Start"
+                    alignItems="Center"
+                >
+                    <items>
+                        <Label  class="sapUiTinyMarginEnd sapUiTinyMarginBegin" text="{i18n>authorName}" labelFor="authorName"/>
+                        <Input  class="sapUiTinyMarginEnd" id="authorName"/>
+                        <Label  class="sapUiTinyMarginBegin" text="{i18n>rating}" labelFor="RI_M"/>
+                        <RatingIndicator class="sapUiTinyMarginEnd sapUiTinyMarginBegin" id="RI_M" maxValue="5" value="4" iconSize="22px" tooltip="Rating Tooltip" />
+                    </items>
+                </FlexBox>
+
+                <FeedInput post="onComment"/>
+                <List
+                        id="idCommentsList"
+                        noDataText="{i18n>noComments}"
+                        showSeparators="Inner"
+                        items="{
+							path: 'odata>comments',
+							sorter: {
+								path: 'rating',
+								descending: true
+							}
+						}">
+                    <FeedListItem
+                            sender="{odata>author}"
+                            info="{
+                                parts: [
+                                    'i18n>productCommentRating',
+                                    'odata>rating'
+                                ],
+                                formatter: 'jQuery.sap.formatMessage'
+                            }"
+                            text="{odata>comment}"/>
+
+                </List>
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>
+
+

@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:core="sap.ui.core" >
+    <Dialog
+            id="OrderCreateDialog"
+            title="Add Product">
+        <f:SimpleForm
+                maxContainerCols="1"
+                layout="ResponsiveGridLayout"
+                labelSpanL="12"
+                labelSpanM="12"
+                emptySpanL="0"
+                emptySpanM="0"
+                columnsL="1"
+                columnsM="1">
+            <f:content>
+                <Label text="Product Name"/>
+                <Input value="{name}" />
+
+                <Label text="Price"/>
+                <Input value="{price}" />
+
+                <Label text="Quantity"/>
+                <Input value="{quantity}" />
+
+                <Label text="Currency"/>
+                <Input value="{currency}" />
+
+                <Label text="Price"/>
+                <Input value="{totalPrice}" />
+
+            </f:content>
+        </f:SimpleForm>
+
+        <buttons>
+            <Button text="Create" press="onProductDialogCreatePress" />
+            <Button text="Close" press="onCancelPress"/>
+        </buttons>
+
+    </Dialog>
+</core:FragmentDefinition>

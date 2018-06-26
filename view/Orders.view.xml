@@ -1,0 +1,92 @@
+<mvc:View
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        controllerName="sap.xander.shavel.app.controller.Orders">
+
+    <Page title="{i18n>ordersTitle}">
+        <content>
+        <IconTabBar
+                id="idIconTabBar"
+                select="onQuickFilter"
+                class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter
+                        showAll="true"
+                        count="{ordersCount>/all}"
+                        text="{i18n>ordersTab}"
+                        key="'All'" />
+                <IconTabSeparator />
+                <IconTabFilter
+                        icon="sap-icon://pending"
+                        iconColor="Negative"
+                        count="{ordersCount>/pending}"
+                        text="{i18n>pendingTab}"
+                        key="'Pending'" />
+                <IconTabFilter
+                        icon="sap-icon://accept"
+                        iconColor="Positive"
+                        count="{ordersCount>/accepted}"
+                        text="{i18n>acceptedTab}"
+                        key="'Accepted'" />
+            </items>
+            <content>
+                <Table
+                        id="tableOfOrders"
+                        items="{odata>/Orders}"
+                        mode="Delete"
+                        delete="onDeleteOrderPress"
+                        updateFinished="onUpdateFinished"
+                >
+                    <headerToolbar>
+                        <Toolbar>
+                            <Button
+                                    id="addUserButton"
+                                    icon="sap-icon://add"
+                                    tooltip="{i18n>createOrderButtonText}"
+                                    press="onOpenDialogPress"/>
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column id="idColumn">
+                            <Text text="{i18n>id}"/>
+                        </Column>
+                        <Column id="customerColumn">
+                            <Text text="{i18n>customer}"/>
+                        </Column>
+                        <Column id="createdAtColumn">
+                            <Text text="{i18n>createdAt}"/>
+                        </Column>
+                        <Column id="shippedAtColumn">
+                            <Text text="{i18n>shippedAt}"/>
+                        </Column>
+                        <Column id="statusColumn">
+                            <Text text="{i18n>status}"/>
+                        </Column>
+                        <Column id="totalPriceColumn">
+                            <Text text="{i18n>totalPrice}"/>
+                        </Column>
+                        <Column id="shipCountryColumn">
+                            <Text text="{i18n>shipCountry}"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem
+                                press="onOrderItemPressed"
+                                type="Navigation"
+                        >
+                            <Text text="{odata>id}"/>
+                            <Text text="{odata>summary/customer}"/>
+                            <Text text="{odata>summary/createdAt}"/>
+                            <Text text="{odata>summary/shippedAt}"/>
+                            <Text text="{odata>summary/status}"/>
+                            <Text text="{odata>summary/totalPrice}"/>
+                            <Text text="{odata>shipTo/country}"/>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </IconTabBar>
+        </content>
+    </Page>
+
+</mvc:View>
