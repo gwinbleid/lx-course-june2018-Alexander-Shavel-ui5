@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f20b3d6-2765-4c3e-9eb4-af5c70bbea79" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/view/Orders.view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Product.view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/FirstPage.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Orders.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/SecondPage.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Order.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ThirdPage.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Product.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Order.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Order.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Product.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Product.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/FirstPage.view.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/SecondPage.view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view/Order.view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ThirdPage.view.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/view/Order.view.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2775">
-              <caret line="185" column="66" lean-forward="true" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
+              <caret line="185" column="66" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -52,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/view/fragments/ProductCreateDialog.fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -66,20 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Product.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/Product.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="386">
+              <caret line="74" column="17" lean-forward="true" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Orders.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Orders.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/Orders.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="197" column="15" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
+            <state relative-caret-position="225">
+              <caret line="183" selection-start-line="183" selection-end-line="183" />
             </state>
           </provider>
         </entry>
@@ -87,8 +79,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -105,7 +97,7 @@
       <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="1545">
               <caret line="103" column="3" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
             </state>
           </provider>
@@ -114,8 +106,8 @@
       <file leaf-file-name="Order.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/Order.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="200" column="10" lean-forward="true" selection-start-line="200" selection-start-column="10" selection-end-line="200" selection-end-column="10" />
+            <state relative-caret-position="572">
+              <caret line="187" column="36" lean-forward="true" selection-start-line="187" selection-start-column="36" selection-end-line="187" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -145,12 +137,12 @@
         <option value="$PROJECT_DIR$/view/fragments/OrderCreateDialog.fragment.xml" />
         <option value="$PROJECT_DIR$/view/Order.view.xml" />
         <option value="$PROJECT_DIR$/controller/BaseController.js" />
-        <option value="$PROJECT_DIR$/controller/Product.controller.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/view/NotFound.view.xml" />
         <option value="$PROJECT_DIR$/view/fragments/ProductCreateDialog.fragment.xml" />
-        <option value="$PROJECT_DIR$/controller/Order.controller.js" />
         <option value="$PROJECT_DIR$/controller/Orders.controller.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/controller/Order.controller.js" />
+        <option value="$PROJECT_DIR$/controller/Product.controller.js" />
       </list>
     </option>
   </component>
@@ -163,8 +155,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="715" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="651" />
     <option name="height" value="744" />
@@ -277,17 +269,18 @@
       <workItem from="1530022422186" duration="8413000" />
       <workItem from="1530037527481" duration="2835000" />
       <workItem from="1530041415023" duration="1468000" />
+      <workItem from="1530481990907" duration="2355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165247000" />
+    <option name="totallyTimeSpent" value="167602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="715" y="24" width="651" height="744" extended-state="4" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49597424" weight="0.8341014" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49597424" weight="0.8339739" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32850242" />
@@ -559,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Product.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/Product.view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -583,7 +569,7 @@
     <entry file="file://$PROJECT_DIR$/view/fragments/ProductCreateDialog.fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -597,35 +583,42 @@
     <entry file="file://$PROJECT_DIR$/view/Order.view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
-          <caret line="185" column="66" lean-forward="true" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="185" column="66" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="1545">
           <caret line="103" column="3" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/Order.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="200" column="10" lean-forward="true" selection-start-line="200" selection-start-column="10" selection-end-line="200" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/Orders.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="197" column="15" selection-start-line="197" selection-start-column="15" selection-end-line="197" selection-end-column="15" />
+        <state relative-caret-position="225">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Order.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="187" column="36" lean-forward="true" selection-start-line="187" selection-start-column="36" selection-end-line="187" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/Product.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="74" column="17" lean-forward="true" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
         </state>
       </provider>
     </entry>

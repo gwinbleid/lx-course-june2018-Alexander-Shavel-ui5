@@ -5,7 +5,7 @@ sap.ui.define([
     "sap/m/MessageToast",
     "sap/m/MessageBox",
     "sap/ui/core/routing/HashChanger"
-], function (BaseController, JSONModel, History, HashChanger, MessageToast, MessageBox) {
+], function (BaseController, JSONModel, History, MessageToast, MessageBox, HashChanger) {
     "use strict";
 
     return BaseController.extend("sap.xander.shavel.app.controller.Order", {

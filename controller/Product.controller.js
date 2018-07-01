@@ -71,7 +71,7 @@ sap.ui.define([
                     author: sAuthor,
                     rating: nRating,
                     createdDate: new Date,
-                    id: parseInt((new Date).getTime() / 1000000)
+                    id: parseInt((new Date).getTime() / 1000)
                 }
             });
 
